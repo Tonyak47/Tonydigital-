@@ -25,7 +25,9 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "fallback-secret-key")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["tonydigital.onrender.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["tonydigital.onrender.com", "127.0.0.1", "localhost", "52.41.36.82",
+"54.191.253.12",
+"44.226.122.3"]
 
 
 # Application definition
@@ -120,8 +122,75 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "product_static"
 
-# Ensure WhiteNoise is used for serving static files
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+
+
+
+#etifsisi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##nS
 
 
 
