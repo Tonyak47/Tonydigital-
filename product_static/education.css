@@ -1,0 +1,190 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    margin-top: 1%;
+    width: auto;
+    height: auto;
+    top: 0%;
+    left: 0%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    position: relative;
+}
+
+.logo{
+    position: relative;
+    font-family: 3rem;
+    color: brown;
+    margin-right: 10%;
+    font-weight: 100;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale3d(1.1);
+    color: white;
+    box-shadow: 0 0 15px brown;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+
+
+
+.nav-menu ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    margin-left: 0.5 ;
+    font-weight: 500;
+    transition: 0.3s ease;
+    justify-self: flex-end;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color:brown;
+    border-bottom: 3px solid brown;
+}
+
+.hamburger{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+
+.education {
+    margin-top: 10rem;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.education h1 {
+    font-size: 4rem;
+    color: brown;
+    margin-bottom: 3rem;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.education-item {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.education-item:hover {
+    transform: scale(1.05);
+}
+
+.education-item h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: brown;
+}
+
+.education-item p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* responsive style for navigation */
+
+@media (max-width: 960px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100px;
+        background-color: black;
+        position: absolute;
+        z-index: 2;
+        top: 65px;
+        justify-content: center;
+        right: 15px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+        .education {
+            padding: 3rem 5%;
+            margin-top: 5rem;
+        }
+
+
+        header {
+            padding: 1rem 5%;
+        }
+
+    .education-list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .education h1 {
+        font-size: 3rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .education-item p {
+        font-size: 1.4rem;
+    }
+}

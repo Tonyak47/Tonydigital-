@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog.css' %}">
+    <title>costumer request</title>
+</head>
+<body>
+    <header>
+        <h1>costumer <span>Blog</span></h1>
+    </header>
+    {% for message in messages %}
+    <div class="blog-post">
+        <h4> {{ message.name }} </h4>
+        <div class="blog-content">
+            <p> {{ message.date }} </p>
+            <p>{{ message.num }}</p>
+            <p>{{ message.gmail }}</p>
+            <p>{{ message.message }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</body>
+</html>

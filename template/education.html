@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'education.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">Babatunde</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav class="nav-menu" id="navMenu">
+         <ul>
+            <li><a href="{% url 'index' %}" >Home</a></li>
+            <li><a href="{% url 'education' %}" class="active">Education</a></li>
+            <li><a href="{% url 'service' %}">Service</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+         </ul>
+        </nav>
+    </header>
+    <section class="education">
+        <h1>My Education</h1>
+        <div class="education-list">
+            <div class="education-item">
+                <h3>Studying for Bachelor of Science in Computer Science</h3>
+                <p>Federal University Dustin-ma, 2022 - 2026</p>
+                <p>Focused on software engineering, web development, and data structures. Actively participated in coding competitions and learning from various online platform.</p>
+            </div>
+            <div class="education-item">
+                <h3>High School Diploma</h3>
+                <p>Heritage High School, 2019 - 2022</p>
+                <p>Graduated with honors, excelling in mathematics and computer science courses. Member of the tech club.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Babatunde. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'men.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Portfolio</title>
+    <link rel="stylesheet" href="{% static 'back.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">Babatunde</div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav class="nav-menu" id="navMenu">
+         <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'service' %}">Service</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'about' %}" class="active">About</a></li>
+         </ul>
+        </nav>
+     </header>
+
+    <section class="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <p>Hello! I'm Babatunde Ashimiyu Akanji, a passionate web developer and designer with a keen eye for detail. I specialize in creating responsive, user-friendly websites and enjoy turning ideas into reality through code.</p>
+            <p>With a background in graphic design and front-end development, I strive to deliver visually appealing and highly functional websites. When I'm not coding, I love gaming, learning new technologies,  watch animation and play basketball</p>
+            <p>And I also go by various do to my tribe we are always give many names and one which i use to acquire some credential for Studying web design is Ayomide Tolani Akanji and i have a nickname Toni derive from my other name Tolani</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Babatunde. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'men.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+       <div class="logo">Babatunde</div>
+       <div class="hamburger" id="hamburger">&#9776;</div>
+       <nav class="nav-menu" id="navMenu">
+        <ul>
+            <li><a href="{% url 'index' %}" class="active">Home</a></li>
+            <li><a href="{% url 'education' %}">Education</a></li>
+            <li><a href="{% url 'service' %}">Service</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+        </ul>
+       </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="{% static 'logo.png' %}" alt="">
+        </div>
+
+        <div class="home-content">
+            <h1>Hi,it's <span>Babatunde</span></h1>
+            <h3 class="text">I'm a <span class="keyframe-text"></span><span class="cursor"></span></h3>
+            <p>I study computer science in federal university of Dustin Ma and <br>i am an undergraduate
+                but i have several certificate for web design and many more</p>
+        <div class="social-icon">
+            <a href="https://instagram.com/tony.beamer" target="_blank">
+                <img src="{% static 'insta.png' %}" alt=""></a>
+            <a href="https://twitter.com/T4nyM1d31" target="_blank">
+                <img src="{% static 'twitter.png' %}" alt=""></a>
+            <a href="https://facebook.com/TonyDigitalSkillsTraining" target="_blank">
+                <img src="{% static 'facebook.png' %}" alt=""></a>
+        </div>
+        <a href="{% url 'service' %}" class="btn">Hire me</a>
+        </div>
+    </section>
+    <script src="{% static 'men.js' %}"></script>
+</body>
+</html>

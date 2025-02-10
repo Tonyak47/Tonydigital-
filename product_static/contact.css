@@ -1,0 +1,304 @@
+/* Global Styling */
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+header {
+    width: 90%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    z-index: 100;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: brown;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    color: white;
+    box-shadow: 0 0 15px brown;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu ul a {
+    text-decoration: none;
+    font-size: 1.0rem;
+    color: white;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu ul a:hover, .nav-menu ul a.active {
+    color: brown;
+    border-bottom: 3px solid brown;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* Floating social icons */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.social-icons a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    background-color: white;
+}
+
+/* Style adjustments for smaller screens */
+@media (max-width: 750px) {
+    .social-icons {
+        right: 1rem;
+    }
+
+    .social-icons a {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+
+
+.contact {
+    margin-top: 10rem;
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 4rem;
+    color: brown;
+    margin-bottom: 2rem;
+}
+
+.contact p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.form-group input, .form-group textarea {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 1px solid #555;
+    border-radius: 0.5rem;
+    background-color: #1a1a1a;
+    color: white;
+    width: 100%;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: brown;
+}
+
+.btn {
+    padding: 1rem 1rem;
+    margin-top: 20px;
+    margin-left: 850px;
+    width: 20%;
+    font-size: 1.5rem;
+    color: brown;
+    background-color: black;
+    border: 1px solid brown;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: brown;
+    color: black;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 960px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100px;
+        background-color: black;
+        position: absolute;
+        z-index: 2;
+        top: 65px;
+        justify-content: center;
+        right: 15px;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu ul a {
+        font-size: 1.0rem;
+        text-align: center;
+    }
+
+    .btn{
+        margin-left: 550px;
+    }
+}
+
+@media (max-width: 750px) {
+    .contact {
+        padding: 3rem 5%;
+    }
+
+    .contact h1 {
+        font-size: 3.5rem;
+    }
+
+    .contact p {
+        font-size: 1.4rem;
+    }
+
+    .form-group input, .form-group textarea {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .contact h1 {
+        font-size: 3rem;
+    }
+
+    .contact p {
+        font-size: 1.2rem;
+    }
+
+
+    .contact-form {
+        padding: 0 1rem;
+    }
+}
+
+/* Adjustments for 500px and below */
+@media (max-width: 500px) {
+    /* Social icons size and spacing */
+    .social-icons a {
+        width: 3rem; /* Same size as larger screens */
+        height: 3rem;
+    }
+
+    /* Submit button alignment and size */
+    .btn {
+        font-size: 1.4rem;
+        margin-left: auto; /* Center horizontally */
+        margin-right: auto;
+        width: 50%; /* Adjust width for better fit */
+        display: block;
+    }
+}
+
+/* Adjustments for 360px and below */
+@media (max-width: 360px) {
+    /* Social icons size */
+    .social-icons a {
+        width: 2.5rem; /* Slightly smaller for smaller screens */
+        height: 2.5rem;
+    }
+
+    /* Submit button */
+    .btn {
+        font-size: 1.2rem;
+        width: 60%; /* Further reduce width */
+    }
+}
